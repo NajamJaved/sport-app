@@ -17,8 +17,6 @@ const LinkTextButton: React.FC<LinkTextButton> = ({
   const imageElement = showImg && <img src={img} className={imgClass} alt="btn-icon" />;
   const textElement = <span className={btnTextClass}>{btnText}</span>;
 
-
-
   const content = (
     <div className="flex items-center gap-x-1 justify-center">
       {imgPosition === "left" ? (

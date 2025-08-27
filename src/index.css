@@ -2,3 +2,231 @@
 @tailwind components; */
 /* @tailwind utilities; */
 @import "tailwindcss";
+
+/* header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-child {
+    width: 85%;
+    height: 60px;
+    margin: 15px 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    color: skyblue;
+}
+
+.edu-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-menu ul li a:hover {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: skyblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    transition: 0.2s ease-in-out;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 30px;
+}
+
+#check {
+    display: none;
+}
+
+.social ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.social ul li i {
+    padding: 0px 10px;
+}
+
+.social ul li i:hover {
+    padding: 0px 10px;
+    color: skyblue;
+}
+
+/* Responsive for max width 768px */
+@media screen and (max-width: 768px) {
+    .header-child {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 15px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        margin: 0px;
+        padding: 5px 0px;
+    }
+
+    .checkbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        cursor: pointer;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        z-index: 999;
+        width: 90%;
+        height: 100vh;
+        background: rgba(20, 19, 17, 1);
+        top: 0;
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 12px 12px !important;
+        left: -100%;
+        transition: left 0.5s;
+        text-align: left;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 80px;
+    }
+
+    .nav-menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        list-style: none;
+        padding: 15px 20px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .nav-menu ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        transition: 0.2s ease-in-out;
+        padding: 10px 25px;
+    }
+
+    .nav-menu ul li a:hover {
+        color: skyblue;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    #check:checked~.edu-nav .nav-menu {
+        left: 0;
+    }
+
+
+    .checkbtn .fa {
+        font-size: 35px;
+        transition: color 0.3s;
+    }
+
+
+    #check~.checkbtn .fa-times {
+        display: none;
+    }
+
+    #check:checked~.checkbtn .fa-bars {
+        display: none;
+    }
+
+    #check:checked~.checkbtn .fa-times {
+        display: block;
+    }
+
+    .social ul {
+        margin-top: 10px;
+        display: none;
+    }
+
+    .social ul li i {
+        padding: 0 8px;
+        font-size: 18px;
+    }
+}
