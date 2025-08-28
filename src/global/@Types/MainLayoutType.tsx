@@ -1,0 +1,3 @@
+type MainLayoutType = {
+    children: string;
+}
