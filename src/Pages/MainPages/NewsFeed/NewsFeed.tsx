@@ -4,7 +4,7 @@ import PostPublish from './Components/PostPublish';
 import ImageUpload from './Components/ImageUpload';
 import VideoUpload from './Components/VideoUpload';
 import SimplePost from './Components/SimplePost';
-import Modal from "@/Components/Modal";
+import Modal from "@/components/Modal"; // ensure path and casing match
 import CommonButton from "@/components/CommonButton";
 
 const getFollows = () => { try { return JSON.parse(localStorage.getItem('follows') || '{"clubs":[],"teams":[],"events":[]}'); } catch { return { clubs: [], teams: [], events: [] }; } };

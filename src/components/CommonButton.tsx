@@ -65,7 +65,7 @@ const CommonButton: React.FC<CommonButtonType> = ({
       {/* Left Icon */}
       {left_icon && !loading && (
         <ReactSVG
-          src={iconToShow}
+          src={left_icon}
           className={`inline-block w-5 h-5 mr-2 ${classIconStyle}`}
         />
       )}
@@ -82,7 +82,7 @@ const CommonButton: React.FC<CommonButtonType> = ({
       {/* Right Icon - Same as left, but flipped */}
       {right_icon && !loading && (
         <ReactSVG
-          src={iconToShow}  // Same icon as the left, only flipped if needed
+          src={right_icon}  // Same icon as the left, only flipped if needed
           className={`${leftIconStyle} transform rotate-180`} // Flip the icon for the right side
         />
       )}

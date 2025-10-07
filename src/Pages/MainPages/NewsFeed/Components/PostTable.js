@@ -1,0 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+const PostTable = ({ posts, onRowOpen }) => {
+    return (_jsxs("table", { className: "min-w-full bg-white border rounded", children: [_jsx("thead", { children: _jsxs("tr", { className: "bg-gray-100 text-left", children: [_jsx("th", { className: "px-4 py-2", children: "Title" }), _jsx("th", { className: "px-4 py-2", children: "Likes" }), _jsx("th", { className: "px-4 py-2", children: "Comments" }), _jsx("th", { className: "px-4 py-2", children: "Shares" }), _jsx("th", { className: "px-4 py-2", children: "Views" }), _jsx("th", { className: "px-4 py-2", children: "Actions" })] }) }), _jsx("tbody", { children: posts.length === 0 ? (_jsx("tr", { children: _jsx("td", { colSpan: 6, className: "px-4 py-6 text-center text-gray-500", children: "No posts" }) })) : (posts.map((p) => {
+                    var _a, _b, _c, _d;
+                    return (_jsxs("tr", { className: "border-t", children: [_jsx("td", { className: "px-4 py-3", children: p.title }), _jsx("td", { className: "px-4 py-3", children: (_a = p.likes) !== null && _a !== void 0 ? _a : 0 }), _jsx("td", { className: "px-4 py-3", children: (_b = (p.comments && p.comments.length)) !== null && _b !== void 0 ? _b : 0 }), _jsx("td", { className: "px-4 py-3", children: (_c = p.shares) !== null && _c !== void 0 ? _c : 0 }), _jsx("td", { className: "px-4 py-3", children: (_d = p.views) !== null && _d !== void 0 ? _d : 0 }), _jsx("td", { className: "px-4 py-3", children: _jsx("button", { onClick: () => onRowOpen === null || onRowOpen === void 0 ? void 0 : onRowOpen(p.id), className: "px-3 py-1 bg-blue-600 text-white rounded", children: "Open" }) })] }, p.id));
+                })) })] }));
+};
+export default PostTable;

@@ -12,7 +12,7 @@ interface Post {
 
 interface PostTableProps {
     posts: Post[];
-    onRowOpen?: (id: number) => void; // called when user opens/view from table
+    onRowOpen?: (id: number) => void;
 }
 
 const PostTable: React.FC<PostTableProps> = ({ posts, onRowOpen }) => {

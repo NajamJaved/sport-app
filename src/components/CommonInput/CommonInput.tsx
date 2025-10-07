@@ -37,7 +37,8 @@ const CommonInput: React.FC<CommonInputProps> = ({
         <div className="w-full">
             {label && (
                 <label className="flex items-center gap-1 mb-2 text-sm font-medium text-[var(--primary-color)]">
-                    {label} {required && <span className="text-[#7F56D9]">*</span>} <ReactSVG src={iconLabel} className="w-4 h-4" />
+                    {label} {required && <span className="text-[#7F56D9]">*</span>}{" "}
+                    {iconLabel && <ReactSVG src={iconLabel} className="w-4 h-4" />}
                 </label>
             )}
             <div className="relative">

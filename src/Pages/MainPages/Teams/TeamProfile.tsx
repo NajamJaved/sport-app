@@ -26,7 +26,7 @@ interface TeamProfileProps {
 }
 
 const getFollows = () => { try { return JSON.parse(localStorage.getItem('follows') || '{"clubs":[],"teams":[],"events":[]}'); } catch { return { clubs: [], teams: [], events: [] }; } };
-const setFollows = (obj: any) => { try { localStorage.setItem('follows', JSON.stringify(obj)); } catch {} };
+const setFollows = (obj: any) => { try { localStorage.setItem('follows', JSON.stringify(obj)); } catch { } };
 
 const TeamProfile: React.FC<TeamProfileProps> = ({ team, clubs, onBack, onUpdate }) => {
     const [draft, setDraft] = useState<Team>({ ...team });
@@ -113,7 +113,7 @@ const TeamProfile: React.FC<TeamProfileProps> = ({ team, clubs, onBack, onUpdate
                 <div className="flex gap-2">
                     <button onClick={onBack} className="px-4 py-2 rounded bg-gray-100">← Back</button>
                     <button onClick={handleSave} className="px-5 py-2 rounded bg-green-600 text-white">Save Changes</button>
-                    <button onClick={toggleFollow} className={`px-4 py-2 rounded ${isFollowing? 'bg-gray-200':'bg-rose-600 text-white'}`}>{isFollowing? 'Following':'Follow'}</button>
+                    <button onClick={toggleFollow} className={`px-4 py-2 rounded ${isFollowing ? 'bg-gray-200' : 'bg-rose-600 text-white'}`}>{isFollowing ? 'Following' : 'Follow'}</button>
                 </div>
             </div>
 
