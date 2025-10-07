@@ -23,3 +23,7 @@ build/
 
 # Cache
 .cache/
+
+# ignore tsc emitted files in src
+/src/**/*.js
+/src/**/*.js.map
