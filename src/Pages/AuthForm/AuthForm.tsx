@@ -3,7 +3,6 @@ import LoginForm from "./Components/LoginForm";
 import SignupForm from "./Components/SignupForm";
 import ForgotPasswordForm from "./Components/ForgotPasswordForm";
 import OtpForm from "./Components/OtpForm";
-import Header from "../TopBar/Header";
 
 export type AuthMode = "login" | "signup" | "forgot" | "otp";
 
@@ -13,7 +12,7 @@ const AuthForm = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 pb-10 px-4 relative">
             {/* App Title - Outside the Card */}
-            <Header />
+
             <h2 className="text-3xl font-bold text-orange-500 text-center mb-6">Sport App</h2>
 
             {/* Auth Form Card */}

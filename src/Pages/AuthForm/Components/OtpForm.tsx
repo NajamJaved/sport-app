@@ -95,6 +95,7 @@ const OtpForm = ({ setMode }: Props) => {
                 </button>
             </form>
 
+
             {/* Timer / Resend OTP */}
             <div className="text-center mt-4 text-sm">
                 {timer > 0 ? (
